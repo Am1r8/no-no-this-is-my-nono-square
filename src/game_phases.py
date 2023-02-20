@@ -78,3 +78,10 @@ def gameplay_phase():
 def exit_game_phase():
     pygame.quit()
     sys.exit()
+
+def game_over():
+    P1.reset()
+    H1.reset()
+    H2.reset()
+    GlobalState.GAME_STATE = GameStatus.MAIN_MENU
+    time.sleep(0.5)
