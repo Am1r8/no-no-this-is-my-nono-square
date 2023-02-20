@@ -74,3 +74,7 @@ def gameplay_phase():
         MusicService.play_slap_sound()
         time.sleep(0.5)
         game_over()
+
+def exit_game_phase():
+    pygame.quit()
+    sys.exit()
