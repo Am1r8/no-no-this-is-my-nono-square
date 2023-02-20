@@ -26,3 +26,6 @@ def main():
 
         MusicService.start_background_music()
         update_game_display()
+
+if __name__ == "__main__":
+    main()
