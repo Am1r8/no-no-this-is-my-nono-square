@@ -28,3 +28,11 @@ class VisualizationService:
     @staticmethod
     def get_santa_hand():
         return pygame.image.load(ASSETS_DIR / "santa_hand.png").convert_alpha()
+
+    @staticmethod
+    def get_score_backing():
+        return pygame.image.load(ASSETS_DIR / "scoreboard.png").convert_alpha()
+
+    @staticmethod
+    def get_press_key_image():
+        return pygame.image.load(MENU_DIR / "press_any_key.png").convert_alpha()
