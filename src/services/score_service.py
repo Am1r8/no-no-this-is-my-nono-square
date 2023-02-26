@@ -24,3 +24,14 @@ class ScoreService:
         data = ScoreService.load_score_file()
 
         return data.get("best")
+
+    @staticmethod
+    def update_score_file(data: dict):
+        with open(score_file_path, mode="w", encoding="utf-8") as file:
+            json.dump(data, file)
+
+    @staticmethod
+    def update_max_score(new_score):
+        data = ScoreService.load_score_file()
+        data["best"] = new_score
+        ScoreService.update_score_file(data)
