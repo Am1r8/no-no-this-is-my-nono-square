@@ -89,3 +89,15 @@ class VisualizationService:
         screen.blit(title, (0, y))
         holding_gift = VisualizationService.get_holding_gift_image()
         screen.blit(holding_gift, (0, 320))
+
+    @staticmethod
+    def draw_press_key(screen, press_y):
+        press_key = VisualizationService.get_press_key_image()
+        screen.blit(press_key, (0, press_y))
+
+    @staticmethod
+    def draw_main_menu(screen, max_score, press_y):
+        VisualizationService.draw_author_credits(screen)
+        VisualizationService.draw_best_score(screen, max_score)
+        VisualizationService.draw_title(screen)
+        VisualizationService.draw_press_key(screen, press_y)
