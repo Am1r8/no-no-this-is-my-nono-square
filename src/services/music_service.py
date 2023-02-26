@@ -29,3 +29,20 @@ class MusicService:
             AUDIO_DIR / "cheer_3.wav",
             AUDIO_DIR / "cheer_4.wav"
         ]
+
+    @staticmethod
+    def start_background_music():
+        if pygame.mixer.music.get_busy():
+            return
+
+        musics = MusicService.get_background_musics()
+        filename = random.choice(musics)
+        pygame.mixer.music.load(filename)
+        pygame.mixer.music.play()
+
+    @staticmethod
+    def play_chop_sound():
+        musics = MusicService.get_chop_musics()
+        filename = random.choice(musics)
+        chop = pygame.mixer.Sound(filename)
+        pygame.mixer.Sound.play(chop)
