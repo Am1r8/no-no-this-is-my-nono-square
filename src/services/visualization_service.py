@@ -20,3 +20,11 @@ class VisualizationService:
     @staticmethod
     def get_dotted_line():
         return pygame.image.load(ASSETS_DIR / "dotted_line.png").convert_alpha()
+
+    @staticmethod
+    def get_background_image():
+        return pygame.image.load(ASSETS_DIR / "bg.png").convert_alpha()
+
+    @staticmethod
+    def get_santa_hand():
+        return pygame.image.load(ASSETS_DIR / "santa_hand.png").convert_alpha()
