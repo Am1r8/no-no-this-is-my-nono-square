@@ -62,3 +62,15 @@ class VisualizationService:
         pygame.display.set_caption("Don't Touch My Presents")
         gift = VisualizationService.get_player_image()
         pygame.display.set_icon(gift)
+
+    @staticmethod
+    def draw_background_with_scroll(screen, scroll):
+        background = VisualizationService.get_background_image()
+        screen.blit(background, (0, scroll))
+
+    @staticmethod
+    def draw_author_credits(screen):
+        credit_font = VisualizationService.get_credit_font_font()
+        author_credits = credit_font.render("©GOODGIS 2022", True, (0, 0, 0))
+        credits_rect = author_credits.get_rect(center=(Config.WIDTH // 2, 620))
+        screen.blit(author_credits, credits_rect)
