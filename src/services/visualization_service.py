@@ -44,3 +44,11 @@ class VisualizationService:
     @staticmethod
     def get_holding_gift_image():
         return pygame.image.load(MENU_DIR / "holding_gift.png").convert_alpha()
+
+    @staticmethod
+    def get_main_font():
+        return pygame.font.Font(ASSETS_DIR / "BaiJamjuree-Bold.ttf", 40)
+
+    @staticmethod
+    def get_credit_font_font():
+        return pygame.font.Font(ASSETS_DIR / "BaiJamjuree-Bold.ttf", 12)
