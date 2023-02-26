@@ -17,3 +17,10 @@ class ScoreService:
     def load_score_file() -> dict:
         with open(score_file_path, mode="r", encoding="utf-8-sig") as file:
             return json.loads(file.read())
+
+    @staticmethod
+    def get_max_score() -> int:
+        ScoreService.create_score_file_if_not_exist()
+        data = ScoreService.load_score_file()
+
+        return data.get("best")
