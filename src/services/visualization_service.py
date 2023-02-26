@@ -36,3 +36,11 @@ class VisualizationService:
     @staticmethod
     def get_press_key_image():
         return pygame.image.load(MENU_DIR / "press_any_key.png").convert_alpha()
+
+    @staticmethod
+    def get_title_image():
+        return pygame.image.load(MENU_DIR / "title.png").convert_alpha()
+
+    @staticmethod
+    def get_holding_gift_image():
+        return pygame.image.load(MENU_DIR / "holding_gift.png").convert_alpha()
