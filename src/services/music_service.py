@@ -46,3 +46,20 @@ class MusicService:
         filename = random.choice(musics)
         chop = pygame.mixer.Sound(filename)
         pygame.mixer.Sound.play(chop)
+
+    @staticmethod
+    def play_score_sound():
+        score_sfx = pygame.mixer.Sound(AUDIO_DIR / "score.wav")
+        pygame.mixer.Sound.play(score_sfx)
+
+    @staticmethod
+    def play_slap_sound():
+        slap_sfx = pygame.mixer.Sound(AUDIO_DIR / "slap.wav")
+        pygame.mixer.Sound.play(slap_sfx)
+
+    @staticmethod
+    def play_cheer_sound():
+        musics = MusicService.get_cheer_musics()
+        filename = random.choice(musics)
+        cheer = pygame.mixer.Sound(filename)
+        pygame.mixer.Sound.play(cheer)
