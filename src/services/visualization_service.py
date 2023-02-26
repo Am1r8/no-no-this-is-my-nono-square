@@ -74,3 +74,18 @@ class VisualizationService:
         author_credits = credit_font.render("©GOODGIS 2022", True, (0, 0, 0))
         credits_rect = author_credits.get_rect(center=(Config.WIDTH // 2, 620))
         screen.blit(author_credits, credits_rect)
+
+    @staticmethod
+    def draw_best_score(screen, max_score):
+        score_font = VisualizationService.get_score_font()
+        best_score = score_font.render(f"Best: {max_score}", True, (0, 0, 0))
+        best_score_rect = best_score.get_rect(center=(Config.WIDTH // 2, 220))
+        screen.blit(best_score, best_score_rect)
+
+    @staticmethod
+    def draw_title(screen):
+        y = sine(200.0, 1280, 10.0, 100)
+        title = VisualizationService.get_title_image()
+        screen.blit(title, (0, y))
+        holding_gift = VisualizationService.get_holding_gift_image()
+        screen.blit(holding_gift, (0, 320))
